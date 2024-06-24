@@ -185,6 +185,13 @@ class clockIn():
 
         cookie = self.driver.get_cookie()
 
+        logger.info('cookies' + str(cookie))
+
+        if len(cookie) != 0:
+            logger.info(cookie[0])
+            logger.info(cookie[0].get('name'))
+            return cookie[0].get('name') + "=" + cookie[0].get('value')
+
         if cookie == '':
             logger.info('没找到cookie')
 
