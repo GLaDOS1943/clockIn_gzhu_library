@@ -190,9 +190,7 @@ class clockIn():
 
             # 尝试访问
             self.driver.get("http://libbooking.gzhu.edu.cn/#/ic/home")
-            
-            cookie = self.get_cookie()
-            
+
             # 计算时间
             start = datetime.datetime.now()
             time.sleep(20)
