@@ -119,7 +119,8 @@ class clockIn():
                 https://newcas.gzhu.edu.cn/cas/login?service=http://libbooking.gzhu.edu.cn/#/ic/home
                 ''')
 
-        if self.driver.title == 'Information Commons':
+        #if self.driver.title == 'Information Commons':
+        if self.driver.title == '广州大学图书馆IC空间管理系统':
             # 说明验证通过，直接进入了界面
             return self.step3()
 
