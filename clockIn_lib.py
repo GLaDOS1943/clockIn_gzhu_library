@@ -134,14 +134,9 @@ class clockIn():
         # 如果是Ubuntu
         if system == 'Linux':
             logger.info("当前操作系统为Linux")
-            #self.titlewait.until(EC.title_contains("Unified Identity Authentication"))
+            self.titlewait.until(EC.title_contains("Unified Identity Authentication" or "统一身份认证"))
             #self.titlewait.until(EC.title_contains("统一身份认证"))
-        # 假设driver是已经初始化的WebDriver实例
-wait = WebDriverWait(driver, 10)  # 等待时间设置为10秒
-
-# 等待直到页面标题包含"Unified Identity Authentication"或"统一身份认证"
-wait.until(lambda d: "Unified Identity Authentication" in d.title or "统一身份认证" in d.title)
-
+       
         else:
             logger.info("当前操作系统为非Linux")
             self.titlewait.until(EC.title_contains("统一身份认证"))
