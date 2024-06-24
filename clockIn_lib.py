@@ -136,7 +136,7 @@ class clockIn():
         if system == 'Linux':
             logger.info("当前操作系统为Linux")
             #self.titlewait.until(EC.title_contains("Unified Identity Authentication"))
-            self.titlewait.until(EC.title_contains("统一身份认证"))
+            #self.titlewait.until(EC.title_contains("统一身份认证"))
        
         else:
             logger.info("当前操作系统为非Linux")
