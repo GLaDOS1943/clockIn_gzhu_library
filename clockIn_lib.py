@@ -290,8 +290,8 @@ class clockIn():
             logger.info(requests.post(url, data=data).text)
 
 
-# 限制10分钟内，必须运行完成，否则失败处理
-@func_set_timeout(60 * 3)
+# 限制5分钟内，必须运行完成，否则失败处理
+@func_set_timeout(60 * 5)
 def main():
     cl = clockIn()
     cl()
