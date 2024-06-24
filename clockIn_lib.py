@@ -183,14 +183,7 @@ class clockIn():
         logger.info('step3 准备进行图书馆预定座位操作')
         logger.info('标题: ' + self.driver.title)
 
-        cookie = self.driver.get_cookie()
-
-        logger.info('cookies' + str(cookie))
-
-        if len(cookie) != 0:
-            logger.info(cookie[0])
-            logger.info(cookie[0].get('name'))
-            return cookie[0].get('name') + "=" + cookie[0].get('value')
+        cookie = self.get_cookie()
 
         if cookie == '':
             logger.info('没找到cookie')
